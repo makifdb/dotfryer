@@ -3,18 +3,25 @@ package cli
 import (
 	"fmt"
 	"io/ioutil"
+	"log"
 	"strings"
 
 	"github.com/makifdb/packer"
 )
 
 func UpdatePackages() {
-	packer.Update()
+	err := packer.Update()
+	if err != nil {
+		log.Printf("Error updating packages: %s\n", err)
+	}
 }
 
 func InstallPackages() {
 	for _, p := range ReadPackages() {
-		packer.Install(p)
+		err := packer.Install(p)
+		if err != nil {
+			log.Printf("Error installing package %s: %s\n", p, err)
+		}
 	}
 
 }
