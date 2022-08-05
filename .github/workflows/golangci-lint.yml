@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
   # Optional: allow read access to pull request. Use with `only-new-issues` option.
-  pull-requests: read
+  # pull-requests: read
 jobs:
   golangci:
     name: lint
@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/setup-go@v3
         with:
-          go-version: 1.18
+          go-version: 1.17
       - uses: actions/checkout@v3
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v3
