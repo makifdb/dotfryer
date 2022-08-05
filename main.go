@@ -1,14 +1,7 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/makifdb/dotfryer/cli"
-)
+import "github.com/makifdb/dotfryer/cmd"
 
 func main() {
-	cli.ReadConfigFile()
-	cli.InstallPackages()
-	f := cli.ReadDotfilesFile()
-	fmt.Println(f)
+	cmd.Execute()
 }
