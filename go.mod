@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/makifdb/packer v0.0.0-20220407133825-e2f3b217f244
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	gopkg.in/yaml.v3 v3.0.1
 )
 
